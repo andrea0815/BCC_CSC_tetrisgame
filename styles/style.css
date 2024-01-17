@@ -1,0 +1,305 @@
+:root {
+  --color-black: #4c3636;
+  --color-bg: #e1c52f;
+  --gameboyHeight: 98vh;
+  --gridWidth: calc(var(--gameboyHeight)/14);
+  --gridHeight: calc(var(--gameboyHeight)/14);
+  --miniGridWidth: calc(var(--gameboyHeight)/14);
+  --miniGridHeight: calc(var(--gameboyHeight)/14);
+}
+
+@font-face {
+  font-family: Kemco Pixel;
+  src: url(../fonts/KemcoPixelBold.ttf) format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 17px;
+  font-family: Kemco Pixel;
+  color: var(--color-black);
+  cursor: url(../img/pointer.png), auto;
+}
+
+body {
+  background-image: url('../img/background.png');
+  background-size: 350vh;
+  background-repeat: no-repeat;
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-bg);
+  overflow: hidden;
+}
+
+#start-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+/* TEXT */
+
+#startScreen p {
+  font-size: 1.7vh;
+  line-height: 2vh;
+}
+
+.title {
+  margin-bottom: 4vh;
+  font-size: 4vh;
+}
+
+.textCenter {
+  position: inherit;
+  text-align: center;
+  margin: 0.5em;
+}
+
+.blinking {
+  animation: blinking 0.8s infinite;
+}
+
+.displayText {
+  position: absolute;
+  left: 60%;
+  font-size: 2vh;
+}
+
+#scoreDisplay {
+  left: 62%;
+  top: 10%;
+}
+
+#score {
+  left: 62%;
+  top: 18%;
+  font-size: 3.5vh;
+}
+
+#highscoreDisplay {
+  top: 35%;
+}
+
+#highscore {
+  top: 47%;
+  font-size: 3.5vh;
+}
+
+#next {
+  top: 62%;
+  
+}
+
+#space {
+  position: absolute;
+  top: 72vh;
+  right: 6.5vh;
+  font-size: 0.8em;
+}
+
+#copyright {
+  position: absolute;
+  bottom: 4vh;
+  right: -40vh;
+  font-size: 0.8em;
+}
+
+/* /////////////////////////////////////// */
+
+#gameboy {
+  background-image: url('../img/gameboy.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: var(--gameboyHeight);
+  width: calc(var(--gameboyHeight)/1.5);
+  position: relative;
+}
+
+
+/* GAME SCREENS */
+
+#gameboyScreen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.screens {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+
+  width: calc(var(--gameboyHeight)*0.395);
+  height: calc(var(--gameboyHeight)/2.65);
+  top: calc(var(--gameboyHeight)*0.168);
+  left: calc(var(--gameboyHeight)*0.13);
+  right: calc(var(--gameboyHeight)/7.5);
+  border-radius: 15px;
+}
+
+#screenHighlight {
+  background-image: url('../img/screenHighlight.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  mix-blend-mode: screen;
+  opacity: 0.3;
+}
+
+#startScreen {
+  background-image: url('../img/tetrisStartScreen.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#gameScreen {
+  background-image: url('../img/gameScreenStatic.png');
+  display: none;
+}
+
+#pauseScreen {
+  position: absolute;
+  left: calc(var(--gameboyHeight)*0.08);
+  top: calc(var(--gameboyHeight)*0.17);
+  display: none;
+}
+
+#gameOverScreen {
+  background-image: url('../img/tetrisStartScreen.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CROSS BUTTONS */
+
+#gameboyCross {
+  background-image: url('../img/crossbg2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: calc(var(--gameboyHeight)/5);
+  height: calc(var(--gameboyHeight)/5);
+  /* background-color: rgba(0, 106, 106, 0.277); */
+  position: absolute;
+  bottom: calc(var(--gameboyHeight)/7);
+  left: calc(var(--gameboyHeight)/12);
+}
+
+.btnCross, .btnPause {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#arrowUp {
+  background-image: url('../img/crossArrowUp1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#arrowRight {
+  background-image: url('../img/crossArrowRight1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#arrowDown {
+  background-image: url('../img/crossArrowDown1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#arrowLeft {
+  background-image: url('../img/crossArrowLeft1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* PAUSE BUTTON */
+
+#gameboyBtn {
+  background-image: url('../img/btnbg1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: calc(var(--gameboyHeight)/6);
+  height: calc(var(--gameboyHeight)/6);
+  /* background-color: rgba(0, 106, 106, 0.277); */
+  position: absolute;
+  bottom: calc(var(--gameboyHeight)/7);
+  right: calc(var(--gameboyHeight)/7);
+}
+
+#btnPause {
+  background-image: url('../img/btn02_static.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#btnPlay {
+  background-image: url('../img/btn01_static.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+/* GAME SCREEN */
+
+.grid {
+  width: calc(var(--gameboyHeight)/5.45);
+  height: calc(var(--gameboyHeight)/3.08);
+  left: calc(var(--gameboyHeight)/42);
+  top: calc(var(--gameboyHeight)/38);
+  position: absolute;
+  display: grid;
+  grid-template-rows: repeat(20, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+  padding: 0.5vh;
+}
+
+.grid div {
+  box-sizing: content-box;
+}
+
+.mini-grid {
+  display: grid;
+  width: var(--miniGridWidth);
+  height: var(--miniGridHeight);
+  position: absolute;
+  left: calc(var(--gameboyHeight)*0.25);
+  bottom: calc(var(--gameboyHeight)*0.03);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);  
+}
+
+.mini-grid div {
+  height: 100%;
+  width: 100%;
+}
+
+/* GAME LOGIC */
+
+.tetromino {
+  background-image: url('../img/brick01.png');
+  background-size: cover;
+}
+
+.taken {
+  background-image: none;
+}

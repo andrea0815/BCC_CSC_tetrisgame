@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./styles/style.css">
+  </link>
+  <link rel="stylesheet" href="./styles/animations.css">
+  </link>
+  <title>Tetris Reloaded</title>
+</head>
+
+<body>
+
+  <div id="gameboy">
+
+    <div id="gameboyScreen">
+
+      <!-- START SCREEN -->
+      <div id="startScreen" class="screens">
+        <h1 class="title">Tetris</space></h1>
+        <p class="textCenter blinking">Press "space" to start</space></p>
+      </div>
+
+      <!-- GAME SCREEN -->
+      <div id="gameScreen" class="screens">
+        <div id="pauseScreen" class="blinking">pause</div>
+        <div class="grid">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+          <div class="taken"></div>
+        </div>
+        <div class="mini-grid">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <p id="scoreDisplay" class="displayText">Score</p>
+        <p id="score" class="displayText">0</p>
+        <p id="highscoreDisplay" class="displayText">Highscore</p>
+        <p id="highscore" class="displayText">0</p>
+        <p id="next" class="displayText">next:</p>
+
+      </div>
+
+      <!-- GAMEOVER SCREEN -->
+      <div id="gameOverScreen" class="screens">
+        <h1 class="title">Game Over</h1>
+        <p class="textCenter"><span id="endScoreText">Score:</span> <span id="endScore">0</span></p>
+        <p class="textCenter blinking">"space" to restart</p>
+      </div>
+
+      <div id="screenHighlight" class="screens"></div>
+
+    </div>
+
+    <!-- BUTTON CROSS -->
+    <div id="gameboyCross">
+      <div id="arrowUp" class="btnCross"></div>
+      <div id="arrowRight" class="btnCross"></div>
+      <div id="arrowLeft" class="btnCross"></div>
+      <div id="arrowDown" class="btnCross"></div>
+    </div>
+
+    <!-- PAUSE PLAY BUTTON -->
+    <p id="space">space</p>
+    <div id="gameboyBtn">
+      <div id="btnPause" class="btnPause"></div>
+      <div id="btnPlay" class="btnPause"></div>
+    </div>
+
+    <p id="copyright">© copyright Andrea Windisch</p>
+
+  </div>
+</body>
+
+<script src="./scripts/gameObjects.js" charset="utf-8"></script>
+<script src="./scripts/gameManager.js" charset="utf-8"></script>
+<script src="./scripts/miniDisplay.js" charset="utf-8"></script>
+<script src="./scripts/inputHandling.js" charset="utf-8"></script>
+
+</html>
